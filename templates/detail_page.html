@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block title %}
+home page
+{% endblock %}
+
+
+
+{% block content %}
+
+    
+    {% if tasks %}
+    {% for task in tasks %}
+    <center>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+    </center>
+    <center>
+                <div class="card">
+
+                    <div class="card-body btn btn-outline-dark ">
+                        <h5 ><h8 style="color: red;">Nomi:</h8> {{ task.title }}</h5>
+                        <h5 ><h8 style="color: red;">Narxi:</h8> {{ task.narxi}} ming sum</h5>
+                        <h5 ><h8 style="color: red;">Malumoti:</h8> {{ task.description}}</h5>
+                        <h5 ><h8 style="color: red;">sifati:</h8>{{ task.sifati }}</h5>
+                        <h5 ><h8 style="color: red;">qushilganSanasi:</h8>{{ task.qushilgansana}}</h5>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </center>
+        {% endfor %}
+
+        
+        {% endif %}
+
+  
+  
+{% endblock %}
